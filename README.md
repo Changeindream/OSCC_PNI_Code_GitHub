@@ -148,4 +148,4 @@ See [docs/CODE_SELECTION.md](docs/CODE_SELECTION.md) for the manuscript-to-code 
 
 ## Citation and license
 
-Add the final journal citation and an institution-approved open-source license before making the repository public. Until a license is selected, copyright remains with the authors and no reuse rights are granted by default.
+.
