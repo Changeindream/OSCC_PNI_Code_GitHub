@@ -1,0 +1,86 @@
+study:
+  positive_class: 1
+  class_names: ["non-PNI", "PNI"]
+  seed: 42
+
+preprocessing:
+  spacing_mm: [1.0, 1.0, 1.0]
+  hu_min: -135.0
+  hu_max: 215.0
+  image_size: 224
+  imagenet_mean: [0.485, 0.456, 0.406]
+  imagenet_std: [0.229, 0.224, 0.225]
+
+radiomics:
+  bin_width_hu: 25
+  log_sigma_mm: [1.0, 3.0, 5.0]
+  image_types: ["Original", "LoG", "Wavelet"]
+
+deep_features:
+  architecture: "r3d_18"
+  pretraining: "Kinetics-400"
+  output_features: 512
+  frozen: true
+
+slice_models:
+  resnet101:
+    batch_size: 32
+    learning_rate: 0.0001
+    weight_decay: 0.0001
+    dropout: 0.50
+    mixup_alpha: 0.40
+    loss: "focal"
+  densenet121:
+    batch_size: 32
+    learning_rate: 0.00005
+    weight_decay: 0.0001
+    dropout: 0.10
+    mixup_alpha: 0.40
+    loss: "focal"
+  swin_base:
+    batch_size: 16
+    learning_rate: 0.00005
+    weight_decay: 0.0001
+    dropout: 0.10
+    mixup_alpha: 0.40
+    loss: "focal"
+  vit_base:
+    batch_size: 16
+    learning_rate: 0.0001
+    weight_decay: 0.001
+    dropout: 0.15
+    mixup_alpha: 0.10
+    cutmix_alpha: 0.10
+    loss: "cross_entropy_plus_0.3_focal"
+
+training:
+  epochs: 300
+  early_stopping_patience: 30
+  num_workers: 4
+  mixed_precision: true
+  scheduler: "cosine"
+
+mil:
+  attention_dim: 128
+  backbone_learning_rate: 0.00001
+  head_learning_rate: 0.0001
+  weight_decay: 0.0001
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  max_train_instances: 50
+  full_bag_for_validation_and_test: true
+
+evaluation:
+  bootstrap_resamples: 1000
+  threshold_method: "youden"
+  confidence_level: 0.95
+
+explainability:
+  integrated_gradients_steps: 400
+  integrated_gradients_baseline: 0.0
+  occlusion_window: [3, 15, 15]
+  occlusion_stride: [3, 8, 8]
+  activation_maximization_iterations: 30
+  umap_metric: "cosine"
+  umap_neighbors: 15
+  umap_min_dist: 0.1

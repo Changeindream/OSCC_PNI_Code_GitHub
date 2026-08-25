@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "weights": [
+    {
+      "architecture": "resnet152_mil",
+      "file": "resnet152_mil_best_auc.pt",
+      "bytes": 234580641,
+      "sha256": "26763870cf47773ade9dcff5a780994e1ede9761970bdb5dcdaf16cb396c21fb",
+      "source_bytes": 702292750,
+      "source_sha256": "96c0a3043c3c534d036b2da5812cc6a339ec50d2109be2d459953b4b2d092a2e",
+      "epoch": 10,
+      "best_auc": 0.9983918520503887
+    },
+    {
+      "architecture": "densenet121_mil",
+      "file": "densenet121_mil_best_auc.pt",
+      "bytes": 28978874,
+      "sha256": "4c4e3946ee3e9027ef91e5f397e7a810abb6cbf21d6af72f90cf36b792eb4ac3",
+      "source_bytes": 86008824,
+      "source_sha256": "0666ec8c121cff847e42a34a5e5505d1e3e448bbca693e19466ac1a8753fe778",
+      "epoch": 18,
+      "best_auc": 0.8584829804342
+    },
+    {
+      "architecture": "swin_base_mil",
+      "file": "swin_base_mil_best_auc.pt",
+      "bytes": 351730931,
+      "sha256": "961eb9172763a7cb8d27f2fc716c9c4e178961cafe38696aae8d91482bf4bd4e",
+      "source_bytes": 1052044340,
+      "source_sha256": "fb8ca14d1b52e74f8cd124e946ade767ea515af3b93b4ec6757b3813569d520b",
+      "epoch": 10,
+      "best_auc": 0.9497687720579286
+    },
+    {
+      "architecture": "vit_base_mil",
+      "file": "vit_base_mil_best_auc.pt",
+      "bytes": 344839611,
+      "sha256": "bfdc373d9d2b0f0dc526d58ce5a28423faf4e8f60c263f35c4be76de7f67147d",
+      "source_bytes": 915155119,
+      "source_sha256": "8b82eb5907a5d498e789384ddf2d3eb74116d9dddd9e7628be8419d36fa5f9d1",
+      "epoch": 11,
+      "best_auc": 0.981744344438645
+    }
+  ]
+}

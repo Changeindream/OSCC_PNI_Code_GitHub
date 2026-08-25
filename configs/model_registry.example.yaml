@@ -1,0 +1,18 @@
+models:
+  ResNet152-MIL:
+    architecture: resnet152_mil
+    checkpoint: ../weights/resnet152_mil_best_auc.pt
+  DenseNet121-MIL:
+    architecture: densenet121_mil
+    checkpoint: ../weights/densenet121_mil_best_auc.pt
+  Swin-Base-MIL:
+    architecture: swin_base_mil
+    checkpoint: ../weights/swin_base_mil_best_auc.pt
+  ViT-Base-MIL:
+    architecture: vit_base_mil
+    checkpoint: ../weights/vit_base_mil_best_auc.pt
+
+inference:
+  class_names: ["Non-PNI", "PNI"]
+  image_size: 224
+  max_slices_per_patient: 20

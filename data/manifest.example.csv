@@ -1,0 +1,5 @@
+patient_id,image_path,label,split,center,t_stage,slice_index,roi_area
+DEMO001,/private/path/DEMO001_slice_0100.png,0,train,CENTER_A,T2,100,1820
+DEMO001,/private/path/DEMO001_slice_0101.png,0,train,CENTER_A,T2,101,1934
+DEMO002,/private/path/DEMO002_slice_0088.png,1,validation,CENTER_B,T3,88,2411
+DEMO003,/private/path/DEMO003_slice_0120.png,1,test,CENTER_C,T1,120,1460
