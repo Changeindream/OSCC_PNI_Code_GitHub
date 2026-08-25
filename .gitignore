@@ -5,9 +5,15 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 .venv/
+.venv-test/
 .verify-venv/
 venv/
+dist/
+build/
+.gradio/
 
 # Local configuration and secrets
 .env
@@ -53,6 +59,9 @@ data/**/*.json
 !data/README.md
 !data/manifest.example.csv
 
+# Deliberately de-identified and audited demonstration images
+!examples/**/*.png
+
 # Model artifacts
 *.pt
 *.pth
@@ -68,6 +77,12 @@ weights/
 weights/*
 !weights/README.md
 !weights/manifest.json
+!weights/*.pt
+!weights/parts/
+!weights/parts/*
+# Locally reconstructed from the tracked LFS parts.
+weights/swin_base_mil_best_auc.pt
+weights/vit_base_mil_best_auc.pt
 
 # Generated results
 outputs/

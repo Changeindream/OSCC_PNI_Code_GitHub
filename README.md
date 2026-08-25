@@ -1,6 +1,8 @@
 # OSCC PNI prediction from contrast-enhanced CT
 
-This repository contains the analysis code for the study **“Multicenter contrast-enhanced CT deep learning for predicting perineural invasion in oral squamous cell carcinoma.”** It implements the methods described in the manuscript and supplementary material while excluding patient data, exploratory tutorial code, and generated figures. The four de-identified, inference-only MIL checkpoints used by the Gradio interface are published as assets of the private `model-weights-v1` release.
+[![Live Gradio demo](https://img.shields.io/badge/Hugging%20Face-Live%20Gradio%20Demo-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/changeindream/oscc-pni-mil-research-demo)
+
+This repository contains the analysis code for the study **“Multicenter contrast-enhanced CT deep learning for predicting perineural invasion in oral squamous cell carcinoma.”** It implements the methods described in the manuscript and supplementary material while excluding patient data, exploratory tutorial code, and generated figures. The four de-identified, inference-only MIL checkpoints used by the Gradio interface are included through Git LFS.
 
 The code covers:
 
@@ -12,6 +14,10 @@ The code covers:
 - patient-level performance estimates, bootstrap confidence intervals, and publication-style plots;
 - Grad-CAM-family maps, integrated gradients, occlusion, gradient SHAP, activation maximization, and UMAP;
 - a local Gradio research prototype for patient-bag inference.
+
+The exact deployable source for the public interface is preserved in [`demo/`](demo/README.md). Ten de-identified
+example patient bags (five PNI and five non-PNI) are available in [`examples/`](examples/README.md) so readers can try
+the workflow without supplying their own images.
 
 ## Important scope statement
 
@@ -34,27 +40,23 @@ The manuscript-aligned training pipeline and the released interface models are k
 
 ## Installation
 
-Python 3.11 is recommended. The released GPU environment uses PyTorch 2.7.1, torchvision 0.22.1, timm 1.0.15, and CUDA 12.8. Clone the repository, install the environment, and download the four private-release assets into `weights/` before launching the interface:
+Python 3.11 is recommended. The released GPU environment uses PyTorch 2.7.1, torchvision 0.22.1, timm 1.0.15, and CUDA 12.8. Install Git LFS and pull the weights before launching the interface:
 
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 # Linux/macOS: source .venv/bin/activate
 python -m pip install --upgrade pip
+git lfs install
+git lfs pull
+python scripts/manage_weight_parts.py reconstruct
 python -m pip install -r requirements-app-cu128.txt
 ```
 
-Authenticated GitHub CLI users can download all four checkpoints with:
-
-```bash
-gh release download model-weights-v1 \
-  --repo Changeindream/OSCC_PNI_Code_GitHub \
-  --dir weights
-```
-
-Alternatively, open the repository's **Releases** page and place the four `.pt`
-assets in `weights/`. Verify their sizes and SHA-256 digests against
-`weights/manifest.json` before inference.
+The reconstruction command joins the Git LFS parts for the Swin and ViT
+checkpoints and verifies their published SHA-256 digests. It is lossless and does
+not change model parameters or predictions. ResNet and DenseNet are stored as
+ordinary single-file Git LFS objects.
 
 The complete analysis extras can be installed with:
 
@@ -141,7 +143,9 @@ docs/                    Code-selection audit and reproducibility notes
 scripts/                 Trusted checkpoint export and verification utilities
 src/oscc_pni/            Reusable implementation
 tests/                   Fast unit tests that do not require patient data
-weights/                 Checkpoint manifest and downloaded release assets
+weights/                 Released inference-only checkpoints (Git LFS)
+demo/                    Source snapshot for the live Hugging Face Gradio Space
+examples/                Ten anonymous patient bags for interface demonstration
 ```
 
 See [docs/CODE_SELECTION.md](docs/CODE_SELECTION.md) for the manuscript-to-code mapping and the reasons original files were retained, consolidated, or excluded.

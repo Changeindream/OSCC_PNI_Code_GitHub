@@ -1,0 +1,818 @@
+{
+  "schema_version": 1,
+  "purpose": "De-identified example bags for research-software demonstration only.",
+  "selection": {
+    "method": "cryptographically random patient sampling within class",
+    "patients_per_class": 5,
+    "minimum_slices": 3,
+    "maximum_slices": 20,
+    "seed_published": false
+  },
+  "deidentification": {
+    "original_filenames_retained": false,
+    "source_to_alias_mapping_retained": false,
+    "images_reencoded": true,
+    "embedded_metadata_retained": false,
+    "burned_in_identifier_review": {
+      "required": true,
+      "status": "passed",
+      "method": "manual review of full-resolution class contact sheets",
+      "reviewed_on": "2026-08-26",
+      "finding": "No visible names, record numbers, dates, or other burned-in text."
+    }
+  },
+  "classes": [
+    {
+      "name": "PNI",
+      "label": 1,
+      "cases": [
+        {
+          "case_id": "PNI_001",
+          "slice_count": 4,
+          "files": [
+            {
+              "path": "pni/PNI_001/slice_001.png",
+              "sha256": "4cd04dd63d75eda6f615bc72f9c188c5ddd0ee205964d3dea40a0fda45fd4844",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_001/slice_002.png",
+              "sha256": "5861d418aa317f27ee24e15bc596ebe2c893aba7038dd959f8045eb5d28d6a7c",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_001/slice_003.png",
+              "sha256": "754f0cb6d8e3afc5650bc3bd0ec71fe843381cbb9871b63f4925bd2bc886af6e",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_001/slice_004.png",
+              "sha256": "58dbc37a6b440222180c09ce15d8163dc3ddc3ee2e9693cea5da7a18389dbdc1",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "PNI_002",
+          "slice_count": 17,
+          "files": [
+            {
+              "path": "pni/PNI_002/slice_001.png",
+              "sha256": "2dffaee1be3384de8bd93e8a2b46b1bc3735a71ab1264362c96117f522a22ac2",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_002.png",
+              "sha256": "6c2ad06bee6084723aa943a7ba60c4ddf9db192d9193a06a1fc666f4fd3104e4",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_003.png",
+              "sha256": "935b1f633149541c4cb95d2c76a4058d4c1b1d628b49a1ee5404be3146f51879",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_004.png",
+              "sha256": "9718ee045d227e1e83359693d81cef11daebdf3a3e749df7ff6cd0c898dd4745",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_005.png",
+              "sha256": "9c04aeceb1409c4b93c66ba2421f885c941a56e6051e3ca41d26e2eee2a4b151",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_006.png",
+              "sha256": "e9afe3669be674785d1da08bd6facbe6ef3aa664e0d3bc63a9ff0826ddd3cdcf",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_007.png",
+              "sha256": "099a529014fedf9b40daa5aceab3bfbe477aadc0f05b78da962b1fc678ad598c",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_008.png",
+              "sha256": "04fd54bf72a373b80a631cda6c67108da582239f4557307e7d21e6e122bc8bfb",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_009.png",
+              "sha256": "60642419ae6b78a988eda735b85b9ac7991404b12a02e76d38447e7b9b097f69",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_010.png",
+              "sha256": "2534522042903d4628e0f9a94fbdcabe985f0a982731a8c4d432113317ccac94",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_011.png",
+              "sha256": "89618d10df2d602d2aed7bc6ada4ce2ed86a0ef82769576ec6d6c6eded07e581",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_012.png",
+              "sha256": "03893eaf7cc081b48d9d3f8a650150d64d2ba18b9773041d930fca6bec8768bc",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_013.png",
+              "sha256": "afc6d663cbb355dab9f33064017079ad12f9b39421fc6d6af58acda95c22ef1e",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_014.png",
+              "sha256": "970d6f3555f628353bf8f9504c385c0210cffe24c40bc5439526a75b6165fe68",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_015.png",
+              "sha256": "5e02e06c9bad0a398e23cbc0f50a3f809df3b3210e2680e0a4e9910885980953",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_016.png",
+              "sha256": "d0fcf08e8b676f3a7d5cf733594aeb8ae378ebe9c1be76b0a7c5b2e7ff65a1cf",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_002/slice_017.png",
+              "sha256": "8620b611e3b6f78b113377fbd8ac9fc1f0a9a32e06ae023e4adec41b6bdd2a33",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "PNI_003",
+          "slice_count": 4,
+          "files": [
+            {
+              "path": "pni/PNI_003/slice_001.png",
+              "sha256": "a35f268d21d2d244d7913ec1521d39030d431ade80b5d203cb1e9c8f1b60858f",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_003/slice_002.png",
+              "sha256": "29bc57229cc7fdfac013452c41c54a08a6e16ee1cf1673b261186e7e56201231",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_003/slice_003.png",
+              "sha256": "4e844498a0c064e70706307f97800a28cc311f123ed651ee300830714fbd70ac",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_003/slice_004.png",
+              "sha256": "7317eb37435dddfc037193b5fa3c91b7204a8c4fddd89a742af508d6fbee4f6b",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "PNI_004",
+          "slice_count": 4,
+          "files": [
+            {
+              "path": "pni/PNI_004/slice_001.png",
+              "sha256": "2da21317ce821012918be031c0f59e258bdc0f31412558d31b79d9c35a58a2cd",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_004/slice_002.png",
+              "sha256": "1977dcc20937989c9ec5ef25991ad08fef65b29aac898c123b4db5b58a798adc",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_004/slice_003.png",
+              "sha256": "a1cf940ec51377eb6c7523f4f62386f3bf89e0013071e94ca2854193dc7dae84",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_004/slice_004.png",
+              "sha256": "961feb856c6366695388a5368ae8a54ab4bdec0eb396e1ed7f18c385865c8e84",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "PNI_005",
+          "slice_count": 3,
+          "files": [
+            {
+              "path": "pni/PNI_005/slice_001.png",
+              "sha256": "2891e2c52918f82d126cecf2d3913caacd26de645a42e53a6836377d79c6119f",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_005/slice_002.png",
+              "sha256": "daaae7170ccee4bafcad0cb2942be9621e48a69abc3fb300fa6be8e20a8d2854",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "pni/PNI_005/slice_003.png",
+              "sha256": "aa17b629ad95469df6bcd62d929bbbf45fb479bd06b0430593942a1da4e178e9",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Non-PNI",
+      "label": 0,
+      "cases": [
+        {
+          "case_id": "NPNI_001",
+          "slice_count": 14,
+          "files": [
+            {
+              "path": "non_pni/NPNI_001/slice_001.png",
+              "sha256": "43f3a92888e95cc4c7ecfad3b439c87bd303c9a74b47745120338c3738972b39",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_002.png",
+              "sha256": "8964bfa370d2d26a8aa669f55962f9026d9d7a0462eac6d5d9e688742498da8f",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_003.png",
+              "sha256": "f513951e2e68c2d5e7587a30006b00803b396d6b0368f615889d2eb520d337e1",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_004.png",
+              "sha256": "4eb32416720ad986b0e1e753c10850d4055d06f3101aee03dba668c2f0005dcf",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_005.png",
+              "sha256": "78b588b90d053f1a67d23c726ddd03118f7e77c5ad8d84d47cd68d1ce58e7dca",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_006.png",
+              "sha256": "fdd019d6ea8344a681d9b44955b4c7c3b161d71b05bcbedf494b2c2ece6562de",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_007.png",
+              "sha256": "92a4be4bfaec3987bc21f0779b92a6a94ec575ba1e764c20cd36cef59b9afbf1",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_008.png",
+              "sha256": "c1e057a0b0b068cc3c268bb5deeaa4d698e587c3cd8714e69e55e83e02bb0a81",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_009.png",
+              "sha256": "add61211655b0c882084e5543c8b7f1ca07374042987de3933c41b542923af7c",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_010.png",
+              "sha256": "60da0e68680e22146139628c3cfb9833cc456fc4097c39062e309327051b7865",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_011.png",
+              "sha256": "77c30ab17b825b89370ed7d5b7410c52f36183bbfb6cb15e5d6e7de7242f5864",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_012.png",
+              "sha256": "43680f3eb25da94c9d6958b8b120a4807393de1f7a800b07d699457fd91f4601",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_013.png",
+              "sha256": "c5612654f6919dc376d3a325d05f1bf1efa302be514d6f115f122a57324ed6cd",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_001/slice_014.png",
+              "sha256": "db35c29962c2ed69cb77bef08d258e10b40778bf307383acf755cf2b520a7bc5",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "NPNI_002",
+          "slice_count": 14,
+          "files": [
+            {
+              "path": "non_pni/NPNI_002/slice_001.png",
+              "sha256": "3b96dfbe93a449c9184c837814d9276a4cdde7b03060ee0a89c5b265cff0bc0a",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_002.png",
+              "sha256": "06b5597693c99f56d7f5135e0feb56647402d530b2e533d481cf54a19357bc77",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_003.png",
+              "sha256": "4758e0c37f3a2ef1220a04c19590da9ac782eccf90d6aec971537049752ef4b9",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_004.png",
+              "sha256": "bed05e860732ddba524d5472dbb2541b682f72b4f75fc6858030db0c2835e10c",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_005.png",
+              "sha256": "e6b7148bb64273e5459595f1222ff7bf7b7f78c1cd0ac5ad0f2a7e7fe738fb54",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_006.png",
+              "sha256": "44af6df7b7c6679594b4e4319586b5cd5cba09211617018c46e0eadd4e577764",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_007.png",
+              "sha256": "388ace777cdbddc74413332526376fada576c53a7f4b25a8184741b51eaff340",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_008.png",
+              "sha256": "6b0aef00abe253672fbb58f739c4930fbf2f91591a78a5a7852b331a3abd0ad6",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_009.png",
+              "sha256": "236eae7fa5e9914b26edc5fbb6d6d12bde4724dde2de5a3e4ae9306d5cd69d3b",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_010.png",
+              "sha256": "529150e4fd19d932869d10e5c73672895a2ad4e9985f138b3d7b380a4e7641c0",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_011.png",
+              "sha256": "60a949757215f49861fabfe711963d6054d8617a27425b7092ea090eb70c9c49",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_012.png",
+              "sha256": "34cdca0505ba4d2610574aa45e870fd275d1f9c3df89f340c3c8ce7e6c55d48f",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_013.png",
+              "sha256": "7fce3cf973c3eed8685d4da07403aeb5658cbf069946c0fca780c20eef343057",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_002/slice_014.png",
+              "sha256": "ba081cb3d36fdf80c96a0d6484669e59fa5033f2587416e4adc3a283b66b57d1",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "NPNI_003",
+          "slice_count": 7,
+          "files": [
+            {
+              "path": "non_pni/NPNI_003/slice_001.png",
+              "sha256": "aba64e06115d20f95ea94c91caad11d5d81ac53d5e039ddb2c44f054f144ace5",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_003/slice_002.png",
+              "sha256": "298410a4ea6170f55c60cd1571067125f04625c2edc0030a76a6cfc187861593",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_003/slice_003.png",
+              "sha256": "e3e9f517e84916d52684fe3c1348fcb35f1aa213d5e90d67caaec582d8a9cfad",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_003/slice_004.png",
+              "sha256": "6f7f728559015272d33c90155a94160c2868b078c0e22db94e84ca2489c3d824",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_003/slice_005.png",
+              "sha256": "a02b4812e76e5e275052b7e3deb31e1dc12c8c9c4ffa453a31ae9c5ada883ae0",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_003/slice_006.png",
+              "sha256": "202e5ccc81215e0401618af1e17afa17327d90bb2e16d5fde3d8f1f37fc6febc",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_003/slice_007.png",
+              "sha256": "52efee6f397715ed2b705799466a1aab4d14df4c56895d3e8f0aac4c0c493147",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "NPNI_004",
+          "slice_count": 3,
+          "files": [
+            {
+              "path": "non_pni/NPNI_004/slice_001.png",
+              "sha256": "03d883c9568a891a8f91be6b178f75d0bd6d30b9cfcafff6a77e954927798083",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_004/slice_002.png",
+              "sha256": "43adc10b0b386a4b5863c5226aca3adc0a2d7e8543089b76967491b582392848",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_004/slice_003.png",
+              "sha256": "27bf898007271461b6e27a8d412d570cf54479b478307ee5389d281182288fea",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        },
+        {
+          "case_id": "NPNI_005",
+          "slice_count": 10,
+          "files": [
+            {
+              "path": "non_pni/NPNI_005/slice_001.png",
+              "sha256": "b3b69ffb7ca3e8422c3978f805b0afa13294df24edb2274e3b146e4a42981e38",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_002.png",
+              "sha256": "56c60e178aa61a3f66666076e4b9febee377028ad26208b5b5bec71292f05202",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_003.png",
+              "sha256": "c7335b63394d9f5676233f73710c6500f3c4de1b65ac7d9c9e204c9455f2a85f",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_004.png",
+              "sha256": "93b2b5727ff67babfd288b3f00d51adb5f0ce1b610e25b39f51b8b0767ef0512",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_005.png",
+              "sha256": "5362bdc176f26a7576f1cc99bc2acaeaf60fc35127518fbd6cb66ac947744255",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_006.png",
+              "sha256": "35fdcff4811d1aa2b831676f99274093221c51224f5b0870599e9b0b5d8f2d1d",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_007.png",
+              "sha256": "6f7dc087342d539f9ba797a8aaac155accca344812e9e0eaecde6fa881187658",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_008.png",
+              "sha256": "e85a271b05354825486a65615adbbd2d9ca0e42b28fb4cf788217d45c5485566",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_009.png",
+              "sha256": "643f1d6b752f398652c58860399abf47a8772f7de437df86d464fdeabd9c65d0",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            },
+            {
+              "path": "non_pni/NPNI_005/slice_010.png",
+              "sha256": "751382d9e2fdd0308676b9f4522dca75a7dd74f490e1ef1936add57f0eb5b03f",
+              "dimensions": [
+                128,
+                128
+              ],
+              "mode": "L"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
