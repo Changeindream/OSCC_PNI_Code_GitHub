@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, released model weights, or research demo, please
+  cite both this software record and the associated manuscript when its final
+  journal citation becomes available.
+title: >-
+  OSCC PNI Code: Research code and trained model weights for Multicenter Deep
+  Learning Predicts Perineural Invasion in Oral Cancer
+type: software
+authors:
+  - given-names: Xiangze
+    family-names: Meng
+  - given-names: Chengsu
+    family-names: Hou
+  - given-names: Tengfei
+    family-names: Fan
+  - given-names: Ying
+    family-names: Yuan
+  - given-names: Xi
+    family-names: Yang
+version: 1.0.0
+date-released: 2026-08-30
+license: Apache-2.0
+repository-code: https://github.com/Changeindream/OSCC_PNI_Code_GitHub
+url: https://huggingface.co/spaces/changeindream/oscc-pni-mil-research-demo

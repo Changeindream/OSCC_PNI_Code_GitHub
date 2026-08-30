@@ -1,6 +1,7 @@
 # OSCC PNI prediction from contrast-enhanced CT
 
 [![Live Gradio demo](https://img.shields.io/badge/Hugging%20Face-Live%20Gradio%20Demo-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/changeindream/oscc-pni-mil-research-demo)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
 This repository contains the analysis code for the study **“Multicenter contrast-enhanced CT deep learning for predicting perineural invasion in oral squamous cell carcinoma.”** It implements the methods described in the manuscript and supplementary material while excluding patient data, exploratory tutorial code, and generated figures. The four de-identified, inference-only MIL checkpoints used by the Gradio interface are included through Git LFS.
 
@@ -152,4 +153,31 @@ See [docs/CODE_SELECTION.md](docs/CODE_SELECTION.md) for the manuscript-to-code 
 
 ## Citation and license
 
-.
+If you use the code, trained model weights, example cases, or research demo,
+please cite this software release:
+
+```bibtex
+@software{meng_oscc_pni_code_2026,
+  author  = {Meng, Xiangze and Hou, Chengsu and Fan, Tengfei and
+             Yuan, Ying and Yang, Xi},
+  title   = {OSCC PNI Code: Research Code and Trained Model Weights for
+             Multicenter Deep Learning Predicts Perineural Invasion in Oral Cancer},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {https://github.com/Changeindream/OSCC_PNI_Code_GitHub}
+}
+```
+
+The associated manuscript is **“Multicenter Deep Learning Predicts Perineural
+Invasion in Oral Cancer”** by Xiangze Meng, Chengsu Hou, Tengfei Fan, Ying Yuan,
+and Xi Yang. Please replace the software-only citation with, or supplement it
+with, the final journal citation once the bibliographic record and DOI are
+available. GitHub also exposes the same metadata through [`CITATION.cff`](CITATION.cff).
+
+Project-authored code, documentation, configuration files, and released model
+checkpoint files are licensed under the [Apache License 2.0](LICENSE), except
+where otherwise noted. Third-party implementations, dependencies, pretrained
+parameters, and datasets remain subject to their respective upstream terms; see
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). The license does not change
+the research-only, nonclinical scope of this repository and does not grant
+permission to redistribute patient data.

@@ -21,3 +21,12 @@ identical to the released inference checkpoints.
 
 These models are research artifacts, not medical devices. Do not use their output
 for diagnosis or treatment decisions.
+
+## License
+
+The project-authored checkpoint files in this directory are released under the
+repository's [Apache License 2.0](../LICENSE) to the extent the authors own or
+are authorized to license the relevant rights. Upstream code, pretrained
+parameters, and datasets retain their own terms, as summarized in
+[`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md). No patient data are
+licensed or distributed with these checkpoints.

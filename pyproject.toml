@@ -7,7 +7,11 @@ name = "oscc-pni"
 version = "0.1.0"
 description = "Research pipeline for ROI-guided CECT prediction of perineural invasion in OSCC"
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.10,<3.12"
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+]
 dependencies = [
   "numpy>=1.24,<2.1",
   "pandas>=2.0",
