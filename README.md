@@ -32,12 +32,11 @@ The deployment interface is tied to the exact architectures represented by the r
 
 | Interface model | Checkpoint-compatible architecture | Inference file |
 | --- | --- | --- |
-| ResNet-MIL | torchvision ResNet + normalized attention pooling | [`resnet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/resnet_mil.pt) |
-| DenseNet-MIL | torchvision DenseNet + normalized attention pooling | [`densenet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/densenet_mil.pt) |
+| ResNet-101-MIL | torchvision ResNet-101 + normalized attention pooling | [`resnet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/resnet_mil.pt) |
+| DenseNet-121-MIL | torchvision DenseNet-121 + normalized attention pooling | [`densenet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/densenet_mil.pt) |
 | Swin-Base-MIL | legacy Swin-Base + contextual MIL attention (256 dimensions) | [`swin_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/swin_mil.pt) |
 | ViT-Base-MIL | timm ViT-B/16 + normalized attention pooling | [`vit_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/vit_mil.pt) |
 
-The manuscript-aligned training pipeline and the released interface models are kept separate because the original Gradio checkpoint uses ResNet152, whereas the manuscript configuration reports ResNet101. The interface always loads released weights strictly and will fail if an architecture does not match.
 
 ## Installation
 
