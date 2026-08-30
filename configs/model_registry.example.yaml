@@ -1,16 +1,16 @@
 models:
   ResNet152-MIL:
     architecture: resnet152_mil
-    checkpoint: ../weights/resnet152_mil_best_auc.pt
+    checkpoint: ../weights/resnet_mil.pt
   DenseNet121-MIL:
     architecture: densenet121_mil
-    checkpoint: ../weights/densenet121_mil_best_auc.pt
+    checkpoint: ../weights/densenet_mil.pt
   Swin-Base-MIL:
     architecture: swin_base_mil
-    checkpoint: ../weights/swin_base_mil_best_auc.pt
+    checkpoint: ../weights/swin_mil.pt
   ViT-Base-MIL:
     architecture: vit_base_mil
-    checkpoint: ../weights/vit_base_mil_best_auc.pt
+    checkpoint: ../weights/vit_mil.pt
 
 inference:
   class_names: ["Non-PNI", "PNI"]

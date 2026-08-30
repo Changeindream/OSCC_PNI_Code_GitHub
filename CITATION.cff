@@ -22,4 +22,5 @@ version: 1.0.0
 date-released: 2026-08-30
 license: Apache-2.0
 repository-code: https://github.com/Changeindream/OSCC_PNI_Code_GitHub
+repository-artifact: https://huggingface.co/changeindream/oscc-pni-mil-checkpoints
 url: https://huggingface.co/spaces/changeindream/oscc-pni-mil-research-demo

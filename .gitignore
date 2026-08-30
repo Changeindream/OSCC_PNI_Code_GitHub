@@ -77,12 +77,6 @@ weights/
 weights/*
 !weights/README.md
 !weights/manifest.json
-!weights/*.pt
-!weights/parts/
-!weights/parts/*
-# Locally reconstructed from the tracked LFS parts.
-weights/swin_base_mil_best_auc.pt
-weights/vit_base_mil_best_auc.pt
 
 # Generated results
 outputs/

@@ -1,9 +1,10 @@
 OSCC PNI Code
 Copyright 2026 Xiangze Meng and contributors.
 
-The project-authored source code, documentation, configuration files, and
-released model checkpoint files are made available under the Apache License,
-Version 2.0, except where a file or accompanying notice states otherwise.
+The project-authored source code, documentation, and configuration files are
+made available under the Apache License, Version 2.0, except where a file or
+accompanying notice states otherwise. The exact externally hosted checkpoint
+artifacts identified in MODEL_WEIGHTS_LICENSE.md carry the grant stated there.
 
 This distribution includes or depends on third-party work. See
 THIRD_PARTY_NOTICES.md for attribution and upstream license information.

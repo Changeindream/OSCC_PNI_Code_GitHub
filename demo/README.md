@@ -38,8 +38,10 @@ with burned-in identifiers.
   transformer models and Grad-CAM++.
 - Only one model is held in memory at a time. Switching models releases the previous one.
 - If a local `weights/` file is absent, the app downloads it on demand from the public
-  `changeindream/oscc-pni-mil-checkpoints` model repository. Set `MODEL_REPO_ID` to override that source.
-- Training optimizer states were removed from the uploaded files. `weights/manifest.json` records SHA-256 checksums of
+  [`changeindream/oscc-pni-mil-checkpoints`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints)
+  model repository. Set `MODEL_REPO_ID` to override that source.
+- Training optimizer states were removed from the hosted files. The root
+  [`weights/manifest.json`](../weights/manifest.json) pins the Hugging Face revision and records SHA-256 checksums of
   both the original checkpoints and the exact inference-only exports.
 - Image preprocessing matches the supplied prototype: resize to 224 × 224, convert to RGB tensor, and apply ImageNet
   normalization.

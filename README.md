@@ -3,7 +3,7 @@
 [![Live Gradio demo](https://img.shields.io/badge/Hugging%20Face-Live%20Gradio%20Demo-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/spaces/changeindream/oscc-pni-mil-research-demo)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
-This repository contains the analysis code for the study **“Multicenter contrast-enhanced CT deep learning for predicting perineural invasion in oral squamous cell carcinoma.”** It implements the methods described in the manuscript and supplementary material while excluding patient data, exploratory tutorial code, and generated figures. The four de-identified, inference-only MIL checkpoints used by the Gradio interface are included through Git LFS.
+This repository contains the analysis code for the study **“Multicenter Deep Learning Predicts Perineural Invasion in Oral Cancer.”** It implements the methods described in the manuscript and supplementary material while excluding patient data, exploratory tutorial code, generated figures, and model binaries. The four inference-only MIL checkpoints used by the Gradio interface are hosted separately in the public [OSCC PNI MIL checkpoints](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints) repository on Hugging Face.
 
 The code covers:
 
@@ -24,7 +24,7 @@ the workflow without supplying their own images.
 
 This is research software, not a medical device. It must not be used for clinical diagnosis or treatment decisions. The paper reports internal testing; prospective site-separated validation is still required.
 
-No imaging data, masks, patient names, medical-record numbers, or derived patient-level outputs are included. The released checkpoints contain model tensors and primitive training metadata only. See [data/README.md](data/README.md) before preparing a local dataset.
+No imaging data, masks, patient names, medical-record numbers, derived patient-level outputs, or model binaries are stored in this GitHub repository. The externally hosted inference checkpoints contain model tensors and primitive training metadata only. See [data/README.md](data/README.md) before preparing a local dataset.
 
 ## Released Gradio models
 
@@ -32,32 +32,29 @@ The deployment interface is tied to the exact architectures represented by the r
 
 | Interface model | Checkpoint-compatible architecture | Inference file |
 | --- | --- | --- |
-| ResNet152-MIL | torchvision ResNet-152 + normalized attention pooling | `weights/resnet152_mil_best_auc.pt` |
-| DenseNet121-MIL | torchvision DenseNet-121 + normalized attention pooling | `weights/densenet121_mil_best_auc.pt` |
-| Swin-Base-MIL | legacy Swin-Base + contextual MIL attention (256 dimensions) | `weights/swin_base_mil_best_auc.pt` |
-| ViT-Base-MIL | timm ViT-B/16 + normalized attention pooling | `weights/vit_base_mil_best_auc.pt` |
+| ResNet152-MIL | torchvision ResNet-152 + normalized attention pooling | [`resnet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/resnet_mil.pt) |
+| DenseNet121-MIL | torchvision DenseNet-121 + normalized attention pooling | [`densenet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/densenet_mil.pt) |
+| Swin-Base-MIL | legacy Swin-Base + contextual MIL attention (256 dimensions) | [`swin_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/swin_mil.pt) |
+| ViT-Base-MIL | timm ViT-B/16 + normalized attention pooling | [`vit_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/vit_mil.pt) |
 
 The manuscript-aligned training pipeline and the released interface models are kept separate because the original Gradio checkpoint uses ResNet152, whereas the manuscript configuration reports ResNet101. The interface always loads released weights strictly and will fail if an architecture does not match.
 
 ## Installation
 
-Python 3.11 is recommended. The released GPU environment uses PyTorch 2.7.1, torchvision 0.22.1, timm 1.0.15, and CUDA 12.8. Install Git LFS and pull the weights before launching the interface:
+Python 3.11 is recommended. The released GPU environment uses PyTorch 2.7.1, torchvision 0.22.1, timm 1.0.15, and CUDA 12.8. Install the application dependencies, then download and verify the weights from Hugging Face:
 
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 # Linux/macOS: source .venv/bin/activate
 python -m pip install --upgrade pip
-git lfs install
-git lfs pull
-python scripts/manage_weight_parts.py reconstruct
 python -m pip install -r requirements-app-cu128.txt
+python scripts/download_weights.py
 ```
 
-The reconstruction command joins the Git LFS parts for the Swin and ViT
-checkpoints and verifies their published SHA-256 digests. It is lossless and does
-not change model parameters or predictions. ResNet and DenseNet are stored as
-ordinary single-file Git LFS objects.
+The download command pins the published Hugging Face revision and verifies every
+file against the byte counts and SHA-256 digests in [`weights/manifest.json`](weights/manifest.json).
+Downloaded model binaries remain ignored by Git.
 
 The complete analysis extras can be installed with:
 
@@ -144,7 +141,7 @@ docs/                    Code-selection audit and reproducibility notes
 scripts/                 Trusted checkpoint export and verification utilities
 src/oscc_pni/            Reusable implementation
 tests/                   Fast unit tests that do not require patient data
-weights/                 Released inference-only checkpoints (Git LFS)
+weights/                 External-weight manifest and download documentation
 demo/                    Source snapshot for the live Hugging Face Gradio Space
 examples/                Ten anonymous patient bags for interface demonstration
 ```
@@ -174,10 +171,12 @@ and Xi Yang. Please replace the software-only citation with, or supplement it
 with, the final journal citation once the bibliographic record and DOI are
 available. GitHub also exposes the same metadata through [`CITATION.cff`](CITATION.cff).
 
-Project-authored code, documentation, configuration files, and released model
-checkpoint files are licensed under the [Apache License 2.0](LICENSE), except
-where otherwise noted. Third-party implementations, dependencies, pretrained
-parameters, and datasets remain subject to their respective upstream terms; see
+Project-authored code, documentation, and configuration files are licensed under
+the [Apache License 2.0](LICENSE), except where otherwise noted. The four exact
+SHA-pinned checkpoint artifacts hosted on Hugging Face carry the grant described
+in [`MODEL_WEIGHTS_LICENSE.md`](MODEL_WEIGHTS_LICENSE.md). Third-party
+implementations, dependencies, pretrained parameters, and datasets remain
+subject to their respective upstream terms; see
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). The license does not change
-the research-only, nonclinical scope of this repository and does not grant
+the research-only, nonclinical scope of this project and does not grant
 permission to redistribute patient data.

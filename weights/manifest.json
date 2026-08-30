@@ -1,111 +1,41 @@
 {
-  "format_version": 1,
+  "format_version": 2,
+  "storage": "huggingface",
+  "repository_id": "changeindream/oscc-pni-mil-checkpoints",
+  "repository_url": "https://huggingface.co/changeindream/oscc-pni-mil-checkpoints",
+  "revision": "135f6ecfa8610413207248fd0a6274acdad17f08",
   "weights": [
     {
+      "display_name": "ResNet152-MIL",
       "architecture": "resnet152_mil",
-      "file": "resnet152_mil_best_auc.pt",
-      "bytes": 234580641,
-      "sha256": "26763870cf47773ade9dcff5a780994e1ede9761970bdb5dcdaf16cb396c21fb",
-      "source_bytes": 702292750,
-      "source_sha256": "96c0a3043c3c534d036b2da5812cc6a339ec50d2109be2d459953b4b2d092a2e",
-      "epoch": 10,
-      "best_auc": 0.9983918520503887
+      "file": "resnet_mil.pt",
+      "bytes": 234571843,
+      "sha256": "2adb6492519f3b7a9d43c90833b813d7600d213aa76c4206abc108fd863fffd1",
+      "source_sha256": "96c0a3043c3c534d036b2da5812cc6a339ec50d2109be2d459953b4b2d092a2e"
     },
     {
+      "display_name": "DenseNet121-MIL",
       "architecture": "densenet121_mil",
-      "file": "densenet121_mil_best_auc.pt",
-      "bytes": 28978874,
-      "sha256": "4c4e3946ee3e9027ef91e5f397e7a810abb6cbf21d6af72f90cf36b792eb4ac3",
-      "source_bytes": 86008824,
-      "source_sha256": "0666ec8c121cff847e42a34a5e5505d1e3e448bbca693e19466ac1a8753fe778",
-      "epoch": 18,
-      "best_auc": 0.8584829804342
+      "file": "densenet_mil.pt",
+      "bytes": 28971921,
+      "sha256": "e195d06b3b99513f485475e769f277af719029630416cd1baf159c25e504eb69",
+      "source_sha256": "0666ec8c121cff847e42a34a5e5505d1e3e448bbca693e19466ac1a8753fe778"
     },
     {
+      "display_name": "Swin-Base-MIL",
       "architecture": "swin_base_mil",
-      "file": "swin_base_mil_best_auc.pt",
-      "bytes": 351730931,
-      "sha256": "961eb9172763a7cb8d27f2fc716c9c4e178961cafe38696aae8d91482bf4bd4e",
-      "source_bytes": 1052044340,
-      "source_sha256": "fb8ca14d1b52e74f8cd124e946ade767ea515af3b93b4ec6757b3813569d520b",
-      "epoch": 10,
-      "best_auc": 0.9497687720579286,
-      "storage": "split-lfs",
-      "parts": [
-        {
-          "file": "parts/swin_base_mil_best_auc.pt.part-001",
-          "bytes": 67108864,
-          "sha256": "c1aa4aafaa28870adc702821812adf27136370eaf282c41eb818c22fd0c1fc6b"
-        },
-        {
-          "file": "parts/swin_base_mil_best_auc.pt.part-002",
-          "bytes": 67108864,
-          "sha256": "0f201473b96077970ea9b390501e2d4ee8bf9bd4183a71fe7380eda2b6468d6f"
-        },
-        {
-          "file": "parts/swin_base_mil_best_auc.pt.part-003",
-          "bytes": 67108864,
-          "sha256": "aef14b00c175d2b7dc9a7532e81b1e04e26dd6c0ecdfff9829b4fbefab5c2aeb"
-        },
-        {
-          "file": "parts/swin_base_mil_best_auc.pt.part-004",
-          "bytes": 67108864,
-          "sha256": "9509b9ae30d24ae6fa3abf55068bdc2ac50b4b3bdc56575b905f0cdfc194c24b"
-        },
-        {
-          "file": "parts/swin_base_mil_best_auc.pt.part-005",
-          "bytes": 67108864,
-          "sha256": "1e202321b37eb0c5c131ab7c5f2a2342a13ac68e649f1c753c4051b512db0334"
-        },
-        {
-          "file": "parts/swin_base_mil_best_auc.pt.part-006",
-          "bytes": 16186611,
-          "sha256": "2cc78bca723d279fc3bd89392b0a5edb9c0d5e27c081e2ae802cfb11722928d8"
-        }
-      ]
+      "file": "swin_mil.pt",
+      "bytes": 351725123,
+      "sha256": "46d3eef8c490fea05fdf7621700082244ed0a31d4f44dc75ce88ad6fb56d451d",
+      "source_sha256": "fb8ca14d1b52e74f8cd124e946ade767ea515af3b93b4ec6757b3813569d520b"
     },
     {
+      "display_name": "ViT-Base-MIL",
       "architecture": "vit_base_mil",
-      "file": "vit_base_mil_best_auc.pt",
-      "bytes": 344839611,
-      "sha256": "bfdc373d9d2b0f0dc526d58ce5a28423faf4e8f60c263f35c4be76de7f67147d",
-      "source_bytes": 915155119,
-      "source_sha256": "8b82eb5907a5d498e789384ddf2d3eb74116d9dddd9e7628be8419d36fa5f9d1",
-      "epoch": 11,
-      "best_auc": 0.981744344438645,
-      "storage": "split-lfs",
-      "parts": [
-        {
-          "file": "parts/vit_base_mil_best_auc.pt.part-001",
-          "bytes": 67108864,
-          "sha256": "b334fd15abb44363818bb3c5b346b34e27303f41c1c3934b4823918a97d7d126"
-        },
-        {
-          "file": "parts/vit_base_mil_best_auc.pt.part-002",
-          "bytes": 67108864,
-          "sha256": "d95f2d9518e195176c66d228f5c8ce9d72a561aea96f1547dc169b3eb6362f3b"
-        },
-        {
-          "file": "parts/vit_base_mil_best_auc.pt.part-003",
-          "bytes": 67108864,
-          "sha256": "b3621ba88129841f061ba03bf5820cdcb6ab2a967a3834d23c7b21ec87193505"
-        },
-        {
-          "file": "parts/vit_base_mil_best_auc.pt.part-004",
-          "bytes": 67108864,
-          "sha256": "3bc30d5c21681e554da5da8520c2d3428241c7e7741e44d5a8e15932f0419156"
-        },
-        {
-          "file": "parts/vit_base_mil_best_auc.pt.part-005",
-          "bytes": 67108864,
-          "sha256": "9b31013812f69b51660c7b692e163abc1552e669943060ca69c2e90bce4ba253"
-        },
-        {
-          "file": "parts/vit_base_mil_best_auc.pt.part-006",
-          "bytes": 9295291,
-          "sha256": "a4be2eb2f48cf53e229495e96e246c5b5626936dfaa66d2d4c22fdb6096e4eb8"
-        }
-      ]
+      "file": "vit_mil.pt",
+      "bytes": 344836483,
+      "sha256": "6cb4c79f598a2d582d208aefde4569cd5e3e27f140f84b705b04f894e62b1415",
+      "source_sha256": "8b82eb5907a5d498e789384ddf2d3eb74116d9dddd9e7628be8419d36fa5f9d1"
     }
   ]
 }

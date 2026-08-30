@@ -10,10 +10,10 @@ from pathlib import Path
 import torch
 
 FILENAMES = {
-    "resnet152_mil": "resnet152_mil_best_auc.pt",
-    "densenet121_mil": "densenet121_mil_best_auc.pt",
-    "swin_base_mil": "swin_base_mil_best_auc.pt",
-    "vit_base_mil": "vit_base_mil_best_auc.pt",
+    "resnet152_mil": "resnet_mil.pt",
+    "densenet121_mil": "densenet_mil.pt",
+    "swin_base_mil": "swin_mil.pt",
+    "vit_base_mil": "vit_mil.pt",
 }
 
 

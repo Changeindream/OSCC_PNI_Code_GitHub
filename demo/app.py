@@ -84,14 +84,14 @@ MODEL_SPECS = {
     },
     "ResNet-152 MIL": {
         "kind": "resnet",
-        "filename": "resnet152_mil.pt",
-        "weight": APP_ROOT / "weights" / "resnet152_mil.pt",
+        "filename": "resnet_mil.pt",
+        "weight": APP_ROOT / "weights" / "resnet_mil.pt",
         "architecture": "ResNet-152 + normalized attention MIL",
     },
     "DenseNet MIL": {
         "kind": "densenet",
-        "filename": "densenet121_mil.pt",
-        "weight": APP_ROOT / "weights" / "densenet121_mil.pt",
+        "filename": "densenet_mil.pt",
+        "weight": APP_ROOT / "weights" / "densenet_mil.pt",
         "architecture": "DenseNet-121 + attention MIL",
     },
 }

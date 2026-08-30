@@ -1,32 +1,29 @@
-# Released inference weights
+# External model weights
 
-This directory contains the four patient-level MIL checkpoints used by the Gradio
-research interface. The files contain model parameters and non-identifying
-training metadata only; optimizer state was removed because it is not used for
-inference. Removing optimizer state does not change model predictions.
+Model binaries are not stored in this GitHub repository. The four inference-only
+PyTorch checkpoints are hosted in the public
+[OSCC PNI MIL checkpoints](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints)
+repository on Hugging Face.
 
-The ResNet and DenseNet `.pt` files are tracked directly with Git LFS. The larger
-Swin and ViT checkpoints are stored as 64 MiB Git LFS parts so every upload can
-complete within GitHub's short-lived object-upload window. Reconstruct them after
-cloning with:
+Download all four files and verify their published SHA-256 digests with:
 
 ```bash
-python scripts/manage_weight_parts.py reconstruct
+python scripts/download_weights.py
 ```
 
-Reconstruction is lossless: the script verifies every part and the complete
-checkpoint against the byte counts and SHA-256 digests in `manifest.json` before
-atomically creating each `.pt` file. The resulting files are byte-for-byte
-identical to the released inference checkpoints.
+`manifest.json` pins the Hugging Face revision, exact filenames, byte counts,
+inference-file SHA-256 digests, and the SHA-256 digests of the original training
+checkpoints from which the inference files were exported. Downloaded `.pt` files
+are deliberately ignored by Git.
 
-These models are research artifacts, not medical devices. Do not use their output
-for diagnosis or treatment decisions.
+| Model | Hugging Face file |
+| --- | --- |
+| ResNet152-MIL | [`resnet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/resnet_mil.pt) |
+| DenseNet121-MIL | [`densenet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/densenet_mil.pt) |
+| Swin-Base-MIL | [`swin_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/swin_mil.pt) |
+| ViT-Base-MIL | [`vit_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/vit_mil.pt) |
 
-## License
-
-The project-authored checkpoint files in this directory are released under the
-repository's [Apache License 2.0](../LICENSE) to the extent the authors own or
-are authorized to license the relevant rights. Upstream code, pretrained
-parameters, and datasets retain their own terms, as summarized in
-[`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md). No patient data are
-licensed or distributed with these checkpoints.
+These models are research artifacts, not medical devices. Do not use their
+output for diagnosis or treatment decisions. Licensing for the exact SHA-pinned
+files is described in [`MODEL_WEIGHTS_LICENSE.md`](../MODEL_WEIGHTS_LICENSE.md);
+upstream code, pretrained parameters, and datasets retain their own terms.

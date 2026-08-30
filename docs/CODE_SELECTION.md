@@ -20,7 +20,7 @@ This file records how the original working directories were translated into the 
 ## Excluded material
 
 - Patient CT slices, masks, filenames containing names or medical-record numbers, and patient-level JSON/CSV outputs.
-- Redundant pretrained files and optimizer-heavy training checkpoints. The four Gradio MIL checkpoints are exported as inference-only `.pt` files, verified by SHA-256, and tracked with Git LFS.
+- Redundant pretrained files and optimizer-heavy training checkpoints. The four Gradio MIL checkpoints are exported as inference-only `.pt` files, hosted in the public Hugging Face model repository, and verified against the SHA-256 digests pinned in `weights/manifest.json`; no model binaries are stored in GitHub.
 - Generated JPG, PNG, PDF, and SVG figures; these are outputs, not source code.
 - `__pycache__`, `.pyc`, debug logs, timestamped result folders, and repeated copies of identical modules.
 - ImageNet, fruit, wine, and MNIST tutorial notebooks unrelated to the OSCC analysis.

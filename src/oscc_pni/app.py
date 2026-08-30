@@ -97,7 +97,10 @@ class ModelService:
         settings = self.registry[display_name]
         checkpoint_path = Path(settings["checkpoint"])
         if not checkpoint_path.is_file():
-            raise FileNotFoundError(f"Checkpoint not found: {checkpoint_path}")
+            raise FileNotFoundError(
+                f"Checkpoint not found: {checkpoint_path}. Run "
+                "'python scripts/download_weights.py' from the repository root."
+            )
         model = create_published_mil_model(settings["architecture"])
         metadata = load_published_checkpoint(model, checkpoint_path)
         checkpoint_architecture = metadata.get("architecture")
