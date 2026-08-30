@@ -32,8 +32,8 @@ The deployment interface is tied to the exact architectures represented by the r
 
 | Interface model | Checkpoint-compatible architecture | Inference file |
 | --- | --- | --- |
-| ResNet152-MIL | torchvision ResNet-152 + normalized attention pooling | [`resnet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/resnet_mil.pt) |
-| DenseNet121-MIL | torchvision DenseNet-121 + normalized attention pooling | [`densenet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/densenet_mil.pt) |
+| ResNet-MIL | torchvision ResNet + normalized attention pooling | [`resnet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/resnet_mil.pt) |
+| DenseNet-MIL | torchvision DenseNet + normalized attention pooling | [`densenet_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/densenet_mil.pt) |
 | Swin-Base-MIL | legacy Swin-Base + contextual MIL attention (256 dimensions) | [`swin_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/swin_mil.pt) |
 | ViT-Base-MIL | timm ViT-B/16 + normalized attention pooling | [`vit_mil.pt`](https://huggingface.co/changeindream/oscc-pni-mil-checkpoints/blob/main/vit_mil.pt) |
 
